@@ -17,8 +17,9 @@ class CreateTasksTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->unsignedInteger('owner');
-            $table->boolean('status');
+//            $table->boolean('status')->default();
             $table->timestamp('closed_at')->nullable();
+            $table->char('text','200');
         });
     }
 
